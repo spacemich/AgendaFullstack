@@ -30,6 +30,7 @@ export const updateAgenda = (req, res) => {
     req.body.telefone,
     req.body.email,
   ];
+  
   db.query(q, [...values, req.params.codigo], (err) => {
     if (err) return res.json(err);
     return res.status(200).json("Registro atualizado com sucesso");
