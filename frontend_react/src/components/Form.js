@@ -8,7 +8,7 @@ display: flex;
 align-items: flex-end;
 gap: 10px;
 flex-wrap: wrap;
-background-color: #fff;
+background-color: #0000;
 padding:20px;
 box-shadow: 0px 0px 5px #ccc;
 border-radius: 5px;
@@ -16,21 +16,26 @@ border-radius: 5px;
 const InputArea = styled.div`
 display: flex;
 flex-direction: column;
+color: white;
 `;
+
 const Input = styled.input`
-width: 120px;
-padding: 0 10px;
-border: 1px solid #bbb;
-border-radius: 5px;
-height: 40px;
+  width: 150px;
+  padding: 0 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  height: 40px;
+  color: white; /* ✅ deixa o texto branco */
+  background-color: rgba(255, 255, 255, 0.1); /* ✅ deixa o fundo translúcido */
 `;
+
 const Label = styled.label``;
 const Button = styled.button`
 padding: 10px;
 cursor: pointer;
 border-radius: 5px;
 border: none;
-background-color: #2c73d2;
+background-color:rgb(72, 210, 44);
 color: white;
 height: 42px;
 `;

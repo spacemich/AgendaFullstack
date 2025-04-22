@@ -1,6 +1,5 @@
 import { db } from "../db.js";
 
-// No caso do get não é necessário incluir req de requisição
 export const getAgendas = (_, res) => {
   const q = "SELECT * FROM agenda ORDER BY nome";
   db.query(q, (err, data) => {

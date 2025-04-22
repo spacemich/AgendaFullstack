@@ -8,16 +8,26 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Container = styled.div`
-width: 100%;
-max-width:800px;
-margin-top:20px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap: 10px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: rgba(0, 31, 63, 0.85); /* azul marinho translúcido */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 `;
 
-const Title = styled.h2``;
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+`;
+
+
+const Title = styled.h2`  color:rgb(255, 204, 0);`;
 
 function App() {
   const [agendas, setAgendas] = useState([]);
@@ -36,14 +46,18 @@ function App() {
     getAgendas();
   }, [setAgendas]);
   return (
-    <>
+  <>
+    <Wrapper>
       <Container>
         <Title>AGENDA FRONT-END: REACT e BACK-END: NODE com MYSQL</Title>
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getAgendas={getAgendas} />
         <Grid agendas={agendas} setAgendas={setAgendas} setOnEdit={setOnEdit} />
       </Container>
-      <ToastContainer autoClose={3000} />
-      <GlobalSyle /> </>
-  );
+    </Wrapper>
+
+    <ToastContainer autoClose={3000} />
+    <GlobalSyle />
+  </>
+);
 }
 export default App;

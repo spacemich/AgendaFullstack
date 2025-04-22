@@ -7,12 +7,16 @@ const Global = createGlobalStyle`
     font-family: sans-serif;
   }
 
+
   body {
+    background-image: url("https://i.imgur.com/WeGYM2G.png?1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #f2f2f2;
   }
 `;
 
