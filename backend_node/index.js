@@ -8,6 +8,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/", agendaRoutes);
 
-app.listen(8800, () => {
-  console.log("Servidor backend rodando na porta 8800");
-});
+app.listen (8800);
+
+// app.listen(8800, () => {
+//   console.log("Servidor backend rodando na porta 8800");
+// }); 
+//Esse código é melhor para se usar <3
